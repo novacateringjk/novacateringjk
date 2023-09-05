@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="favicon.png" rel="icon" type="image/x-icon">
+    <title>Nova Catering</title>
+    <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
+    <link href="stile.css" rel="stylesheet">
+<!--    <script>-->
+<!--        document.addEventListener('contextmenu', event => event.preventDefault());-->
+<!--        document.addEventListener('keydown', function (e) {-->
+<!--            if (e.ctrlKey || e.metaKey) {-->
+<!--                e.preventDefault();-->
+<!--            }-->
+<!--        });-->
+<!--    </script>-->
+    <script>
+        let lang;
+        document.addEventListener("DOMContentLoaded", function () {
+console.log(lang);
+            if (lang === undefined) {
+                toggleLanguage()
+            }
+            document.body.style.display = "block";
+            inizio();
+        });
+        document.addEventListener('contextmenu', function(e){
+            e.preventDefault();
+        });
+    </script>
+</head>
+<body>
+<header>
+    <img alt="nova" class="w3-image" src="banner.png" style="display: block;margin-left: auto; margin-right: auto;">
+</header>
+<!--<div class="container">-->
+<!--    -->
+<!--</div>-->
+<div class="w3-container w3-dark-gray">
+
+        <nav >
+
+            <a href="#" class="w3-bar-item w3-button" id="principale" onclick="inizio()">Home</a>
+            <a href="#" class="w3-bar-item w3-button" id="menu" onclick="mmenu()"></a>
+            <a href="#" class="w3-bar-item w3-button" id="aboutus" onclick="mostraaboutus()"></a>
+            <a href="#" class="w3-bar-item w3-button" id="contac" onclick="contattamii()"></a>
+
+
+
+                <a href="#">
+                    <img class="image-container" alt="Indonesian Flag" id="flag-image" onclick="toggleLanguage()" src="indonesia-flag.png">
+                </a>
+
+    </nav>
+
+</div>
+<section class="nascondi,w3-cursive" id="principaletesto">
+    <h2 id="testogrande">Delicious Catering Services</h2>
+    <p id="content"></p>
+    <p id="services"></p>
+    <p id="contact"></p>
+</section>
+<div class="nascondi" id="mostramenu">
+    menu cibo
+
+</div>
+<div class="nascondi" id="mostranoi">
+
+    <h2 id="titleaboutus"></h2>
+    <p id="testoaboutus"></p>
+</div>
+<div class="w3-padding-64 w3-content w3-text-grey nascondi" id="contattami">
+    <h2 id="contactus">Contact Us</h2>
+    <hr class="w3-opacity" style="width:200px">
+
+<!--    <div class="w3-section">-->
+<!--        <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Lubiana, Sl</p>-->
+<!--        <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone / wa: 0038640730712</p>-->
+<!--        <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> <a href="mailto:kubergigolo@gmail.com">Email: kubergigolo@gmail.com</a></p>-->
+<!--    </div><br>-->
+<!--    <p>Let's get in touch. Send me a message:</p>-->
+<!--    <script type="text/javascript">-->
+<!--        $(function () {-->
+<!--            $('.SendEmail').click(function (event) {-->
+<!--                var email = 'kubergigolo@gmail.com';-->
+<!--                var subject = document.getElementById("subject").value;-->
+<!--                var emailBody = document.getElementById("message").value;-->
+
+<!--                document.location = "mailto:"+email+"?subject="+subject+"&body="+emailBody;-->
+<!--            });-->
+<!--        });-->
+<!--    </script>-->
+    <!--        <form target="_blank">-->
+    <!--            <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>-->
+    <!--            <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>-->
+    <p><input class="w3-input w3-padding-16" id="name" placeholder="Name" type="text"></p>
+    <p><input class="w3-input w3-padding-16" id="message" placeholder="Message" type="text"></p>
+<!--    <p>-->
+<!--        &lt;!&ndash;                <button class="w3-button w3-light-grey w3-padding-large" type="submit" >&ndash;&gt;-->
+<!--        &lt;!&ndash;                    <i class="fa fa-paper-plane"></i> SEND MESSAGE&ndash;&gt;-->
+<!--        &lt;!&ndash;                </button>&ndash;&gt;-->
+<!--        <button class="SendEmail w3-button w3-light-grey w3-padding-large"><i class="fa fa-paper-plane"></i>Send Email</button>-->
+<!--    </p>-->
+    <!--        </form>-->
+    <!-- End Contact Section -->
+<!--    <form >-->
+<!--        <label for="name" id="contattaname">Name:</label>-->
+<!--        <input id="name" name="name" required type="text">-->
+<!--        <br>-->
+<!--        <label for="email">Email:</label>-->
+<!--        <input id="email" name="email" required type="email">-->
+<!--        <br>-->
+<!--        <label for="message" id="contattamessaggio">Message:</label>-->
+<!--        <textarea id="message2" name="message" required></textarea>-->
+<!--        <br>-->
+        <img alt="wsapp" onclick="sendWhatsApp()"  src="WhatsApp.svg">
+        <input onclick="sendEmail()" type="button" value="Send via Email">
+<!--    </form>-->
+
+
+</div>
+
+
+<footer class="footer w3-gray">
+
+<!--    <p id="contactus"></p>-->
+    <p><a href="mailto:info@mycatering.com">novacateringjk@gmail.com</a> | Phone: +6281319028228</p>
+    <p>&copy; 2023 Nova Catering. All rights reserved.</p>
+</footer>
+<script src="js.js"></script>
+
+</body>
+</html>
